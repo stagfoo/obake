@@ -1,5 +1,5 @@
 {
-  "name": "obakejs",
+  "name": "obake",
   "version": "0.0.1",
   "description": "a simple watchable state using just Proxy and Promise",
   "main": "dist/index.js",
@@ -14,7 +14,9 @@
     "state",
     "immutable",
     "watch",
-    "simple"
+    "simple",
+    "react",
+    "frontend"
   ],
   "author": "stagfoo",
   "license": "ISC",
