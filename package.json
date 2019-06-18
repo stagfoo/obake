@@ -1,0 +1,29 @@
+{
+  "name": "obakejs",
+  "version": "0.0.1",
+  "description": "a simple watchable state using just Proxy and Promise",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stagfoo/obake.git"
+  },
+  "keywords": [
+    "state",
+    "immutable",
+    "watch",
+    "simple"
+  ],
+  "author": "stagfoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stagfoo/obake/issues"
+  },
+  "homepage": "https://github.com/stagfoo/obake#readme",
+  "devDependencies": {
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.5.2"
+  }
+}
