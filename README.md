@@ -1,7 +1,7 @@
 # obake (ﾉ⊙﹏⊙)ﾉ
 Statement management with proxies and promise...in a spooky way
 
-https://obake.glitch.me/ <- including source
+Demo: https://obake.glitch.me/ <- including source
 
 ## Getting started
 
