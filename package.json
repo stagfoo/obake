@@ -1,5 +1,5 @@
 {
-  "name": "obake",
+  "name": "obake.js",
   "version": "1.0.1",
   "description": "a simple watchable state using just Proxy and Promise",
   "main": "dist/index.js",
