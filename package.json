@@ -1,6 +1,6 @@
 {
   "name": "obake",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "a simple watchable state using just Proxy and Promise",
   "main": "dist/index.js",
   "scripts": {

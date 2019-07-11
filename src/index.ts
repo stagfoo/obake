@@ -8,7 +8,7 @@ export function createStore(defaultState: object, render: Function, reducers: ob
           Reflect.set(target, prop, res[prop]);
           // Re-render the app
         }).then(() => {
-          render();
+          render(target);
           return true
         });
         ;
