@@ -34,7 +34,7 @@ state.greeting = {
 
 ```
 as you can see however it takes an reducer name which must be registered in the reducers,
-this way you can just mutate the object willy nilly.
+this way you can't just mutate the object willy nilly.
 
 and there you go;
 you have reducers, you have immutable state and you have a safe way to mutate it.
