@@ -1,7 +1,7 @@
 # obake (ﾉ⊙﹏⊙)ﾉ
 Statement management with proxies and promise...in a spooky way
 
-Demo: https://obake.glitch.me/ 
+Demo: https://obake.glitch.me/
 
 ## Getting started
 
@@ -11,7 +11,7 @@ const defaultState = {
  greeting: 'BoOOOoo!'
 }
 const render = () => {
-  //re-render your app like react, vue or lit
+  //re-render your app like react, vue, lit, morphdom
 }
 const reducers {
   CHANGE_GREETING: (state, propName, value) => {
@@ -22,14 +22,8 @@ const reducers {
 }
 const state = createStore(defaultState, render, reducers);
 
-```
-Because its a proxy it means you set it like a normal object when you want to change the state
-
-```js
-
-state.greeting = {
-  name: 'CHANGE_GREETING',
-  value: 'HelloooOOOoo!'
+function changeGreeting(){
+  state._update('CHANGE_GREETING', "HelloooOOOoo")
 }
 
 ```
@@ -38,3 +32,17 @@ this way you can't just mutate the object willy nilly.
 
 and there you go;
 you have reducers, you have a safe way to mutate it your store.
+
+*Optional* function `reducer` to make your reducers easier to read and keep the return consistent
+
+```js
+
+const reducers {
+  CHANGE_GREETING: reducer((state, value) => {
+        state.greeting = value;
+    })
+  }
+}
+```
+
+
