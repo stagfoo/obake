@@ -1,4 +1,15 @@
 export function createStore(defaultState: object, render: Function, reducers: object) {
+  let proxyState;
+  if(Object.keys(defaultState).indexOf('_update') > -1) {
+    throw new Error("update is a reserved key (ﾉ⊙﹏⊙)ﾉ");
+  }
+  //Better update syntax
+  defaultState['_update'] = (name, payload) => {
+    proxyState._ = {
+      name,
+      value: payload
+    };
+  };
   return new Proxy(defaultState, {
     set(target, prop, action) {
       // Check the reducer is real
@@ -13,9 +24,18 @@ export function createStore(defaultState: object, render: Function, reducers: ob
         });
         ;
       } else {
-        console.error('This is not a valid reducer, ya turkey 🦃')
-        return false
+        throw new Error("This is not a valid reducer, (ﾉ⊙﹏⊙)ﾉ");
       }
     }
   });
+}
+
+// Optional Reducer function
+export function reducer(mutation){
+  return function (state, value) {
+    mutation(state, value)
+    return new Promise(function(resolve, reject) {
+      resolve(state);
+    });
+  }
 }
