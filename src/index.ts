@@ -20,7 +20,7 @@ export function createStore(defaultState: object, watchers: Array<Function>, red
           // Re-render the app
         }).then(() => {
           //render(target);
-watchers.map(func => func(target, prop, action.name));
+          Object.keys(watchers).map(key => watchers[func](target, prop, action.name));
           return true
         });
         ;
