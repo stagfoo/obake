@@ -1,4 +1,4 @@
-export function createStore(defaultState: object, render: Function, reducers: object) {
+export function createStore(defaultState: object, watchers: Array<Function>, reducers: object) {
   let proxyState;
   if(Object.keys(defaultState).indexOf('_update') > -1) {
     throw new Error("update is a reserved key (ﾉ⊙﹏⊙)ﾉ");
@@ -19,7 +19,8 @@ export function createStore(defaultState: object, render: Function, reducers: ob
           Reflect.set(target, prop, res[prop]);
           // Re-render the app
         }).then(() => {
-          render(target);
+          //render(target);
+watchers.map(func => func(target, prop, action.name));
           return true
         });
         ;
