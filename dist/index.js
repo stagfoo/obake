@@ -1,32 +1,32 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function createStore(defaultState, render, reducers) {
+function createStore(defaultState, watchers, reducers) {
     let proxyState;
-    if (Object.keys(defaultState).indexOf('_update') > -1) {
-        throw new Error("update is a reserved key (ﾉ⊙﹏⊙)ﾉ");
-    }
     defaultState['_update'] = (name, payload) => {
         proxyState._ = {
             name,
             value: payload
         };
     };
-    return new Proxy(defaultState, {
+    proxyState = new Proxy(defaultState, {
         set(target, prop, action) {
             if (Object.keys(reducers).indexOf(action.name) > -1) {
-                return reducers[action.name](target, prop, action.value).then(res => {
+                return reducers[action.name](target, action.value)
+                    .then(res => {
                     Reflect.set(target, prop, res[prop]);
-                }).then(() => {
-                    render(target);
+                })
+                    .then(() => {
+                    Object.keys(watchers).map(key => watchers[key](target));
                     return true;
                 });
-                ;
             }
             else {
                 throw new Error("This is not a valid reducer, (ﾉ⊙﹏⊙)ﾉ");
+                return false;
             }
         }
     });
+    return proxyState;
 }
 exports.createStore = createStore;
 function reducer(mutation) {
