@@ -27,10 +27,11 @@ npm install obake.js --save
 ```js
 // the defaultState is the state you want to proxy
 
+//store.ts
 import { reducer } from 'obake.js';
 
 export const defaultState = {
-  greeting: 'Hello World (´｡• ᵕ •｡`)',
+  greeting: 'Spooky Ghost (ﾉ⊙﹏⊙)ﾉ',
  }
 
 export const reducers = {
@@ -38,6 +39,13 @@ export const reducers = {
     state.greeting = value;
   }),
 }
+
+//actions.ts
+import { state } from './store';
+
+export function handleGreetingClick() {
+  state._update('updateGreeting', "Calm Ghost ( ´ ▿ ` )")
+};
 
 ```
 as you can see however it takes an reducer name which must be registered in the reducers,
