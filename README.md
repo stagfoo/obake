@@ -1,6 +1,6 @@
 <p align="center"><img width="300px" src="docs/github-logo.png" />
 </p>
-<p align="center">Statement management with proxies and promise...in a spooky way</p>
+<p align="center">Statement management with proxies and promise...in a dead simple way</p>
 <hr>
 <p align="center">
 <a href="https://opensource.org/licenses/MIT">
