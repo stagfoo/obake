@@ -22,7 +22,7 @@ npm install obake.js --save
 - they allow for valuation |･д･)ﾉ	
 - promise based so no race conditions! ( ´ ▿ ` )
 
-## Getting started
+## Examples
 
 ```js
 // the defaultState is the state you want to proxy
