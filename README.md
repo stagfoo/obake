@@ -20,7 +20,7 @@ npm install obake.js --save
 
 - I found objects in javascript and that have mutation listeners
 - they allow for valuation |･д･)ﾉ	
-- promise so no race conditions!  ٩(ˊ〇ˋ*)و	
+- promise based so no race conditions!  ٩(ˊ〇ˋ*)و	
 
 ## Getting started
 
