@@ -55,5 +55,7 @@ there you go; you have reducers, you have a safe way to mutate it your store.
 
 *Optional* function `reducer` to make your reducers easier to read and keep the return consistent but its optional
 
+[View Reducer Function](https://github.com/stagfoo/obake/blob/5c701ab5e7bf9144c182f314aba9d557190ac657/src/index.ts#L33)
+
 ## Demo
 https://obake.glitch.me/
