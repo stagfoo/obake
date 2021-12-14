@@ -10,6 +10,12 @@
 
 ---
 
+# Installation
+
+```
+npm install obake.js --save
+```
+
 # Why make this?
 
 - I found objects in javascript and that have mutation listeners
