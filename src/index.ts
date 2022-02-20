@@ -43,7 +43,7 @@ export function createStore(defaultState: ProxiedObject, watchers: Watchers, red
           });
       }
 
-      throw new Error('This is not a valid reducer, (ﾉ⊙﹏⊙)ﾉ');
+      throw new Error(`[${action.name}] is not a valid reducer, (ﾉ⊙﹏⊙)ﾉ`);
     },
   });
   return proxyState;
