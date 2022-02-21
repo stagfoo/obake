@@ -1,10 +1,13 @@
 {
   "name": "obake.js",
-  "version": "1.2.0",
+  "version": "0.0.0-dev-def4133",
   "description": "a simple watchable state using just Proxy and Promise",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint \"src/**/*.{tsx,ts}\"",
+    "lint:fix": "eslint \"src/**/*.{tsx,ts}\" --fix",
+    "spellcheck": "git diff --name-only | cspell --file-list stdin"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,13 @@
   },
   "homepage": "https://github.com/stagfoo/obake#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "cspell": "^5.18.5",
+    "eslint": "^8.9.0",
+    "eslint-config-xo": "^0.40.0",
+    "eslint-config-xo-space": "^0.32.0",
     "tsc": "^1.20150623.0",
-    "typescript": "^3.5.2"
+    "typescript": "^4.5.5"
   }
 }
