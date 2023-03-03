@@ -59,3 +59,7 @@ there you go; you have reducers, you have a safe way to mutate it your store.
 
 ## Demo
 https://obake.glitch.me/
+
+# Support
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H616GHW)
